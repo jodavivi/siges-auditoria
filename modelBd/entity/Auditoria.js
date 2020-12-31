@@ -1,6 +1,10 @@
 const Sequelize =  require('sequelize');
 const db = require('../../config/db'); 
-  
+
+db.createSchema("sistemas").then(() => {
+    // esquema para el servicio
+    });
+
 const Auditoria = db.define('auditoria', { 
     Id : {
         type:Sequelize.INTEGER,
